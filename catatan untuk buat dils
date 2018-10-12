@@ -1,0 +1,6 @@
+Tahapan membuat CMS
+
+1. Instalasi
+2. Kofigurasi env
+3. Buat database schema di migration dan model
+4. Templating Layout
