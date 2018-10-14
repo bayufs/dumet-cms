@@ -65,6 +65,7 @@ class HomeController extends Controller
        
 
         MetaTag::set('title', 'DUMET CMS - '.str_replace('-',' ',$id));
+        MetaTag::set('description', 'Ini adalah halaman website kategori');
 
         return view('frontend.content-page.page-category', compact('page_categories','mini_post','categories'));
     }
