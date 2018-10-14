@@ -1,21 +1,19 @@
 @extends('frontend/base.base')
-@section('title', 'Home-CMS')
 @section('content-page')
 				<!-- Main -->
                 <div id="main">
 
                     <!-- Post -->
-                    @if (empty($articles))
+                    @if (empty($page_categories))
                         <h1>No News Found</h1>
                     @else
-                    @foreach ($articles as $rows)
+                    @foreach ($page_categories as $rows)
                         <article class="post">
                             <header>
                                 <div class="title">
                                     <h2><a href="#">{{ $rows->title }}</a></h2>
                                 </div>
                                 <div class="meta">
-                                       
                                     <time class="published" datetime="2015-11-01">{{ \Carbon\Carbon::parse($rows->created_at)->format('d F Y')}}</time>
                                     <a href="#" class="author"><span class="name">Admin</span><img src="{{ asset('images') }}/{{ $rows->icon }}" alt="" /></a>
                                 </div>
@@ -36,8 +34,8 @@
                         @endforeach
                         @endif
                     <!-- Pagination -->
-
-                        {{ $articles->links('custom.pagination') }}
+                    {{ $page_categories->links('custom.pagination') }}
+                       
 
                 </div>
 

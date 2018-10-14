@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRelationArticletagsTagId extends Migration
+class CreateRelationTagsArticlesTags extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class CreateRelationArticletagsTagId extends Migration
      */
     public function up()
     {
-        Schema::table('article_tags', function (Blueprint $table) {
-            $table->foreign('tag_id')->references('tags')->on('id')->delete('cascade');
+        Schema::table('articles_tags', function (Blueprint $table) {
+            $table->foreign('tags_id')->references('id')->on('tags')->onDelete('cascade');
         });
     }
 
@@ -25,7 +25,7 @@ class CreateRelationArticletagsTagId extends Migration
      */
     public function down()
     {
-        Schema::table('articletags', function (Blueprint $table) {
+        Schema::table('articles_tags', function (Blueprint $table) {
             //
         });
     }

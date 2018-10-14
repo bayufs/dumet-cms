@@ -4,3 +4,12 @@ Tahapan membuat CMS
 2. Kofigurasi env
 3. Buat database schema di migration dan model
 4. Templating Layout
+5. Buat model untuk semua table
+6. setting Models properties
+7. Setup relation tiap model nya
+8. tampilkan data :
+a. Latest Post
+b. Limit post
+c. Menu Category
+9. custom pagination
+10.Page Category
