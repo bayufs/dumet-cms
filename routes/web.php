@@ -13,3 +13,4 @@
 
 Route::get('/', 'HomeController@index');
 Route::get('news/categories/{id}', 'HomeController@pageByCategory');
+Route::get('search', 'HomeController@search');

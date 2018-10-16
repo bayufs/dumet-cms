@@ -23,7 +23,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1><a href="#">DUMET CMS</a></h1>
+						<h1><a href="{{ url('/') }}">DUMET CMS</a></h1>
 						<nav class="links">
 							<ul>
 								@foreach ($categories as $rows)
@@ -36,8 +36,8 @@
 							<ul>
 								<li class="search">
 									<a class="fa-search" href="#search">Search</a>
-									<form id="search" method="get" action="#">
-										<input type="text" name="query" placeholder="Search" />
+									<form id="search" method="GET" action="{{ url('search') }}">
+										<input type="text" name="keyword" placeholder="Search" />
 									</form>
 								</li>
 								<li class="menu">
